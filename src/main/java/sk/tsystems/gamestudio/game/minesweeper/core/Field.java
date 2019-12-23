@@ -67,6 +67,15 @@ public class Field {
 	public Tile getTile(int row, int column) {
 		return tiles[row][column];
 	}
+	private final long startMillis = System.currentTimeMillis();
+	
+	public int getScore() {
+		int time = (int) ((System.currentTimeMillis() - startMillis) / 1000 );
+		int number = 1000;
+		int score = number - time;
+		return score;
+
+	}
 
 
 	public void openTile(int row, int column) {
@@ -132,13 +141,16 @@ public class Field {
 	 *
 	 * @return true if game is solved, false otherwise
 	 */
-	private boolean isSolved() {
+	public boolean isSolved() {
 		if ((rowCount * columnCount) - getNumberOf(Tile.State.OPEN) == mineCount)
 			return true;
 		else
 			return false;
 
 	}
+	
+
+
 
 	private int getNumberOf(Tile.State state) {
 		int count = 0;

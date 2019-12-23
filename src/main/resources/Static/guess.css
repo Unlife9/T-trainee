@@ -12,7 +12,6 @@ p.average{
 	color: aqua;
 	
 }
-
 div.marking{
 	color: magenta;
 }
@@ -21,37 +20,27 @@ body {
 	background-size: 1920px 1080px;
 
 }
-table {
-  border: 3px solid magenta;
 
+div.mess{
+	color:magenta;
+	text-align: center;
 }
 
-p.first {
-  position: relative;
-  font-family: sans-serif;
-  text-transform: uppercase;
-  font-size: 2 em;
-  letter-spacing: 4px;
-  overflow: hidden;
-background: linear-gradient(90deg, #555000, #FF00FF, #999000); 
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: animate 3s linear infinite;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: rgba(255, 0, 0, 0);
+input[type=text] {
+  background: rgba(7, 81, 105, 0.1);
+  color: white;
+  cursor: help;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+input[type=submit]{
+ background: rgba(105, 7, 7, 0.60);
+ border-radius: 10px;
+ color: white;
 }
 
-@keyframes animate {
-  0% {
-    background-position: -500%;
-  }
-  100% {
-    background-position: 300%;
-  }
-}
-
-
-a.marking{
+a.format{
 	color:white;
 }
 ol.table{
@@ -85,6 +74,12 @@ h4.score{
   text-align: center;
   
 }
+p.numer{
+color: red;
+font-size: 80%;
+
+}
+
 
 p{
 	color:magenta;
@@ -106,8 +101,3 @@ div.column2{
 	
 }
 
-input[type=submit]{
- background: rgba(105, 7, 7, 0.60);
- border-radius: 10px;
- color: white;
-}

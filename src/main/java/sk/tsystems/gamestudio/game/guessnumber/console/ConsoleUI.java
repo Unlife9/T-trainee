@@ -4,8 +4,11 @@ import java.util.Scanner;
 
 public class ConsoleUI {
 
+	final long startMillis = System.currentTimeMillis();
+
 	public void game() {
 		processInput();
+		
 	}
 
 	public void processInput() {
@@ -15,7 +18,8 @@ public class ConsoleUI {
 		number = (int) (Math.random() * 100 + 1);
 
 		Scanner scanner = new Scanner(System.in);
-		long startMillis = System.currentTimeMillis();
+		
+		final long startMillis = System.currentTimeMillis();
 
 		while (true) {
 			try {
@@ -37,6 +41,7 @@ public class ConsoleUI {
 				System.err.println("Zly vstup, pouzij cislo!");
 			}
 		}
+	
 
 	}
 

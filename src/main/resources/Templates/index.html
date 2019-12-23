@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gamestudio</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="/styl.css" type="text/css">
+</head>
+<body>
+
+
+
+
+	<div class="w3-container w3-black w3-center w3-allerta">
+		<h1>Welcome to Game Studio</h1>
+	</div>
+
+
+	<div class="w3-center w3-allerta">
+		<form class="positionS" action="/signin">
+			<h4 class="reg">Registration Here!</h4>
+			Login: &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="name" />
+			<br /> Password: <input type="password" name="password" /> <br />
+			<input type="submit" value="Sign in" />
+		</form>
+
+
+
+		<form class="positionL" action="/login">
+			<h4 class="log">Login Here!</h4>
+			Login: &nbsp; &nbsp; &nbsp; &nbsp;<input type="text" name="name" />
+			<br /> Password: <input type="password" name="password" /> <br />
+			<input type="submit" value="Login" />
+			<br />
+
+			<div th:if="${not @mainController.logged}"
+				th:text="${@mainController.message}"/>
+		</form>
+		<div th:if="${@mainController.logged}">
+			<h5 class="logged">
+				You are logged as <span
+					th:text="${@mainController.loggedPlayer.name}"></span> <br> <a
+					href="/logout">Logout</a>
+			</h5>
+		</div>
+
+
+		<h3>Choose your game:</h3>
+
+		<h4>
+			<br />
+			<a class="menu" href="http://localhost:8080/puzzle" target="_blank">
+				Puzzle 15 </a> <br />
+			<a class="menu" href="http://localhost:8080/minesweeper"
+				target="_blank"> Minesweeper </a> <br />
+			<a class="menu" href="/guessgame" target="_blank">
+				GuessGame </a>
+
+		</h4>
+	</div>
+
+
+ 	 <div class="row">
+		<div class="column">
+			<a href="/puzzle" >Puzzle <br> <br> <img
+				src="https://camo.githubusercontent.com/d71fba92426d4ed52877e5c09c4fab90150704b6/687474703a2f2f6b736176656c6a65762e6769746875622e696f2f736c6964696e672d70757a7a6c652e676966"
+				alt="Puzzle" width="200px" height="260" class="center">
+			</a>
+
+		</div>
+		<div class="column">
+			<a href="/minesweeper">Mines <br> <br> <img
+				src="https://mlexplained.files.wordpress.com/2017/10/minesweeperwin.gif"
+				width="200" height="260" class="center">
+			</a>
+		</div>
+		<div class="column">
+			<a href="/guessgame">Guess Number<br> <br> <img
+				src="https://i.pinimg.com/originals/fc/ca/fa/fccafa6ce178ac8c1499abff6483a131.gif"
+width="200" height="260" class="center">
+</body>
+</html>

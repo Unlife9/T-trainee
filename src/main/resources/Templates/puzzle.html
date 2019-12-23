@@ -14,37 +14,105 @@
 <link rel="stylesheet" href="/puzzle.css" type="text/css">
 </head>
 <body>
-
-	<div class="w3-container w3-black w3-center w3-allerta">
-		<h1>Puzzle</h1>
-	</div>
-
-	<div class="w3-container w3-center w3-allerta">
-		<a class="format" href="http://localhost:8080"> Menu </a> <br /> 
-		<a class="format" href="http://localhost:8080/puzzle"> NewGame </a> <br /> 
-		<a class="format" href="https://fcwallpaper.com/wp-content/uploads/2018/11/HD-Real-Madrid-Backgrounds.jpg"
-			target="_blank"> Full image for inspiration! </a><br />
-		<div th:if="${@puzzleController.solved}">
-			<p class="first">Congratulation! You've solved the puzzle</p>
+	<h4>
+		<div class="w3-container w3-black w3-center w3-allerta">
+			<h1>Puzzle</h1>
 		</div>
-	</div>
 
-	<section>
+		<br />
+		<p>
+			Player: <span th:utext="${@mainController.loggedPlayer?.name}" /><div
+					class="w3-container w3-center w3-allerta">
+
+					<a class="format" href="http://localhost:8080"> Menu </a> <br /> <a
+						class="format" href="http://localhost:8080/puzzle"> NewGame </a> <br />
+					<a class="format"
+						href="https://fcwallpaper.com/wp-content/uploads/2018/11/HD-Real-Madrid-Backgrounds.jpg"
+						target="_blank"> Full image for inspiration! </a><br />
+					<div th:if="${@puzzleController.solved}">
+						<p class="first">Congratulation! You've solved the puzzle</p>
+					</div>
+				</div>
+		</p>
+
 		<div class="container">
-			<div th:utext="${@puzzleController.htmlField}" />
-
-
+			<div th:utext="${@puzzleController.htmlField}"></div>
 		</div>
-	</section>
+
+		<section>
+			</br>
+			<div class="column2">
+				</br>
+				<h4 class="score">Top 10 Score</h4>
+				<ol class="table">
+					<li th:each="score : ${@puzzleController.scores}"><span
+							th:text="${score.username}" /> <span th:text="${score.value}" />
+					</li>
+				</ol>
+			</div>
 
 
+			</br>
+			<div class="column2">
+				<h4 class="score">Rate this Game!</h4>
+			<div class="column3">
+					<form action="/puzzle/rating5">
 
+						<input type="image"
+							src="https://i.pinimg.com/originals/06/87/85/0687851cc6a9bb1213b5a12c9f8408ac.png"
+							alt="Submit" width="70" height="70" />
+					</form>
+				</div>
 
-	
-	<br /><div th:utext="${@puzzleController.message}" />
+				<div class="column3">
+					<form action="/puzzle/rating4">
+						<input type="image"
+							src="https://cdn.shopify.com/s/files/1/1061/1924/products/Slightly_Smiling_Emoji_Icon_34f238ed-d557-4161-b966-779d8f37b1ac_large.png?v=1571606093"
+							alt="Submit" width="70" height="70" />
+					</form>
+				</div>
+				<div class="column3">
+					<form action="/puzzle/rating3">
+						<input type="image"
+							src="https://i.pinimg.com/originals/36/c6/7c/36c67cf603670d027a5a2ed3b04f81a6.png"
+							alt="Submit" width="70" height="70" />
+					</form>
+				</div>
+				<div class="column3">
+					<form action="/puzzle/rating2">
+						<input type="image"
+							src="https://cdn.shopify.com/s/files/1/1061/1924/products/Emoji_Icon_-_Sad_Emoji_grande.png?v=1571606093"
+							alt="Submit" width="70" height="70" />
+					</form>
+				</div>
+				<div class="column3">
+					<form action="/puzzle/rating1">
+						<input type="image"
+							src="https://cdn.shopify.com/s/files/1/1061/1924/products/Disappointed_but_Relieved_Emoji_Icon_1e554748-dab1-472b-937e-54ecd95ee75c_large.png?v=1571606089"
+							alt="Submit" width="70" height="70" />
+					</form>
+				</div>
+				 <p class="average"> Average rating for game: </p>
+				<div class="container" th:text="${@puzzleController.averageRating}"/>
+			</div>
 
+			<div class="column2" th:if="${@mainController.logged}">
+				<form class="write" action="puzzle/comment">
+					Write you comment: <input type="text" name="content" /> <input
+						type="submit" value="Send Comment" />
+				</form>
+			</div>
+			<div class="column2">
+				<h4 class="comment">Comments</h4>
+				<br />
+				<ol class="table">
+					<li th:each="comment: ${@puzzleController.comment}"><span
+							class="user" th:text="${comment.username}" /> <span
+							th:text="${comment.content}" /></li>
+				</ol>
 
-
-
+			</div>
+		</section>
+	</h4>
 </body>
 </html>

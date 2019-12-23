@@ -2,7 +2,6 @@ package sk.tsystems.gamestudio.game.npuzzle;
 
 import java.util.Random;
 
-
 public class Field {
 	private final int rowCount;
 
@@ -13,6 +12,8 @@ public class Field {
 	private int rowEmpty;
 
 	private int columnEmpty;
+	
+	private final long startMillis = System.currentTimeMillis();
 
 	public Field(int rowCount, int columnCount) {
 		this.rowCount = rowCount;
@@ -50,7 +51,7 @@ public class Field {
 
 	private void shuffle() {
 		Random random = new Random();
-		for (int i = 0; i < rowCount * columnCount * 1; i++)
+		for (int i = 0; i < rowCount * columnCount * 5; i++)
 			move(random.nextInt(rowCount * columnCount - 1) + 1);
 	}
 
@@ -85,5 +86,13 @@ public class Field {
 		}
 
 		return true;
+	}
+
+	public int getScore() {
+		int time = (int) ((System.currentTimeMillis() - startMillis) / 1000 );
+		int number = 500;
+		int score = number - time;
+		return score;
+
 	}
 }
