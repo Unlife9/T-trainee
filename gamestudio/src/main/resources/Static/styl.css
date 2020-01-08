@@ -1,0 +1,117 @@
+body {
+	background-image: url("https://i.imgur.com/7FZf9uQ.gif");
+	background-size: 1920px 1080px;
+
+}
+
+h3 {
+color: DarkViolet;
+}
+
+a.menu {
+color: DarkGreen;
+font-size: 100%;
+}
+
+a.menu:hover {
+  color: #ff0080;
+  text-shadow: 0 0 10px #008080;
+
+}
+
+
+a.button {
+color: black;
+}
+.w3-allerta {
+  font-family: "Allerta Stencil", Sans-serif;
+}
+
+h4.reg{
+	   left: 50%;
+    top: 57%;
+    margin-left: -50%;
+    position: absolute;
+    margin-top: -35%;
+}
+
+form.positionS{
+	   left: 50%;
+    top: 57%;
+    margin-left: -49%;
+    position: absolute;
+    margin-top: -23%;
+}
+
+h4.log{
+	   left: 50%;
+    top: 57%;
+    margin-left: -50%;
+    position: absolute;
+    margin-top: -33%;
+}
+
+
+h5.logged{
+	   right: 2%;
+    top: 61%;
+    margin-left: -49%;
+    position: absolute;
+    margin-top: -26%;
+    color: DarkViolet;
+    font-size: 25px;
+	
+}
+
+
+.column {
+	float: right;
+	width: 33.33%;
+}
+.column:hover{
+	  -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
+        
+}
+
+.center {
+
+	width: 70%;
+	padding-bottom:30px;
+}
+
+a {
+	
+	font-size: 30px;
+	color: black;
+	margin-left: 10px;
+}
+div.row{
+	margin-left: 20%;
+	
+}
+div.message{
+	font-size: 150%;
+	text-align: left;
+	padding-left: 10px;
+	color: red;
+}
+
+input[type=text], input[type=password] {
+  padding: 6px 10px;
+  margin: 5px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: lightblue;
+}
+
+.btn-group{
+	float: left;
+	padding-bottom: 5px;
+}

@@ -1,0 +1,144 @@
+
+.w3-allerta {
+  font-family: "Allerta Stencil", Sans-serif;
+}
+  p.first {
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 2 em;
+  letter-spacing: 4px;
+  overflow: hidden;
+background: linear-gradient(90deg, #555000, #FF00FF, #999000); 
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 3s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 0, 0, 0);
+}
+
+@keyframes animate {
+  0% {
+    background-position: -500%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
+ol.table{
+	color:aqua;
+	text-align: center;
+
+}
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid+span:after {
+  position: absolute; content: '✖';
+  padding-left: 5px;
+}
+
+input:valid+span:after {
+  position: absolute;
+  content: '✓';
+  padding-left: 5px;
+}
+
+span.user{
+	color:aqua;
+	
+}
+
+form.write{
+	color:white;
+	
+}
+
+h4.comment{
+	color: white;
+}
+
+
+div.container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 43%;
+  color:aqua;
+}
+
+p.average{
+	text-align: center;
+	color: aqua;
+	
+}
+body {
+	background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/SKD-bqAkQjhvrjayf/videoblocks-motion-particles-and-stars-in-galaxy-abstract-background-elegant-and-luxury-dynamic-style-for-cosmos-template_spfj2pga4_thumbnail-full01.png");
+	background-size: 1920px 1080px;
+
+}
+
+a.format{
+	color: white;
+}
+
+ol{
+  color: magenta;
+ 
+}
+
+h1.score{
+  color: magenta;
+  
+}
+span{
+	color:magenta;
+}
+
+div.score{
+	color: magenta;
+	text-align: center;
+
+}
+
+p{
+	color:magenta;
+}
+
+div.column3{
+	padding-left: 5px ;
+	padding-right: 5px;
+	width: 18.33% ;
+	float:right;
+
+}
+
+div.column2{
+	padding-left: 10px ;
+	padding-right: 10px;
+	width: 33.33% ;
+	float:left;
+	
+}
+h4.score{
+  color: magenta;
+  text-align: center;
+
+}
+
+
+input[type=text] {
+  background: rgba(7, 81, 105, 0.1);
+  color: white;
+  cursor: help;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+input[type=submit]{
+ background: rgba(105, 7, 7, 0.60);
+ border-radius: 10px;
+ color: white;
+}

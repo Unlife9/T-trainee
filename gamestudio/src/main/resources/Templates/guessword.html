@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Guess Game</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="/words.css" type="text/css">
+</head>
+<body>
+<div class="w3-container w3-black w3-center w3-allerta">
+			<h1>Translate Words for Kids</h1>
+		</div>
+<h4>
+		<br />
+		<p>
+			Player: <span th:utext="${@mainController.loggedPlayer?.name}" />
+			<div class="w3-container w3-center w3-allerta">
+
+					<a class="format" href="/"> Menu </a> <br /> 
+					
+<form action="/guessword/generate">
+						<input type="submit" value="New game" >
+						</form>
+ <br>
+		<div class="container">
+		<div class= "numer"> Translate this word:</div>
+		 <div class="mess" th:utext="${@guessWordController.message}"></div>
+		 		<br>
+		 <span class="numer">your attempts(max 7): </span>
+		 <span  class="mess" th:utext="${@guessWordController.message1}"/>
+		  <div class="mess" th:utext="${@guessWordController.message2}"></div>
+
+		<form class="tlac" action="/guessword/word">
+
+
+			<input type="text"name="value" placeholder="input translate word" >
+			</br>
+		<input type="submit"value="submit">
+		</form>
+		</div>
+
+</body>
+</html>
